@@ -45,7 +45,11 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
     controller: 'MainCtrl',
   })
 
-
+  .state('app.tabs',{
+    url:'/tabs',
+    templateUrl: 'templates/tab.html',
+    controller: 'TabCtrl',
+  })
 
   .state('app.home', {
     url: '/home',
