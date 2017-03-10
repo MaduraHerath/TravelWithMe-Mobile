@@ -47,23 +47,26 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
 
   .state('app.tabs',{
     url:'/tabs',
-    templateUrl: 'templates/tab.html',
-    controller: 'TabCtrl',
+    abstract: true,
+    views:{
+      'menuContent':{
+          templateUrl: 'templates/tab.html',
+          controller: 'TabCtrl',
+      }
+    }
+
   })
 
-  .state('app.home', {
-    url: '/home',
+
+  .state('app.tabs.all',{
+    url: '/all',
         views: {
-          'tab':{
-            templateUrl:'templates/tab.html',
-            controller:'TabCtrl'
-          },
             'menuContent': {
                 templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl'
             },
             'fabContent':{
-              template: '<button id="fab-activity" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-navicon"></i></button>',
+              template: '<button id="fab-activity" ng-click="modal.show()" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-navicon"></i></button>',
                 controller: function ($timeout) {
                     $timeout(function () {
                         document.getElementById('fab-activity').classList.toggle('on');
@@ -86,6 +89,24 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
             },
             'fabContent':{
               template: '<button id="fab-activity" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-plus"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-activity').classList.toggle('on');
+                    }, 200);
+                }            
+            }
+          }
+        })
+
+  .state('app.profile', {
+    url: '/profile',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/profile.html',
+                controller: 'ProfileCtrl'
+            },
+            'fabContent':{
+              template: '<button id="fab-activity" class="button button-fab button-fab-bottom-right expanded button-calm-900 flap"><i class="icon ion-edit"></i></button>',
                 controller: function ($timeout) {
                     $timeout(function () {
                         document.getElementById('fab-activity').classList.toggle('on');

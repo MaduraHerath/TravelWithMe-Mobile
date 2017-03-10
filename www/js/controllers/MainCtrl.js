@@ -1,5 +1,31 @@
 angular.module("starter")
-.controller('MainCtrl', function($scope, $state,$ionicSideMenuDelegate) {
+.controller('MainCtrl', function($scope, $state,$ionicSideMenuDelegate,$ionicModal) {
+
+ $ionicModal.fromTemplateUrl('templates/my-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  // Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
+
 	console.log("In main controller...");
 
 
@@ -10,10 +36,13 @@ angular.module("starter")
 
   	$scope.gotomap = function(){
     	$state.go('app.map');
+      $scope.$on('$ionicView.beforeEnter', function(){
+  window.location.reload(true);
+});
   	}
 
   	$scope.gotohome = function(){
-    	$state.go('app.home');
+    	$state.go('app.tabs.all');
   	}
 
     $scope.gototrip = function(){

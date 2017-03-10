@@ -1,9 +1,6 @@
 angular.module("starter")
 .controller('MapCtrl',function($state, $scope,$ionicLoading){
-	 $scope.$on('$ionicView.enter', function() {
-console.log("Logging In...");
-    $window.location.reload();
-});
+
     google.maps.event.addDomListener(window, 'load', function() {
         var myLatlng = new google.maps.LatLng(6.8614355, 79.8805176);
  
@@ -29,6 +26,8 @@ console.log("Logging In...");
 
 
 
-
+$scope.$on('$ionicView.enter', function(){
+  window.location.reload(true);
+});
  
 });
