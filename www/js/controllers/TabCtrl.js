@@ -1,7 +1,7 @@
 angular.module("starter")
-.controller('TabCtrl',function($state, $scope, $ionicPopup){
+.controller('TabCtrl',function($state, $scope, $ionicTabsDelegate){
 
-	  	  	$scope.gotohome = function(){
+	  	  	$scope.gotoall = function(){
     	$state.go('app.tabs.all');
   	}
 
@@ -9,10 +9,8 @@ angular.module("starter")
     	$state.go('app.tabs.article');
   	}
 
-
-
-  	  	$scope.gotohome = function(){
-    	$state.go('app.tabs.all');
+$scope.gototravels = function(){
+    	$state.go('app.tabs.travels');
   	}
 
 })

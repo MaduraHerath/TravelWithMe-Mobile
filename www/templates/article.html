@@ -1,33 +1,39 @@
 
-    <ion-view view-title="Article" class="text-center" id = "Article">
-    <ion-content overflow-scroll="false"  has-bouncing="true">
-       <!--Card-->
-<div class="card">
-
-    <!--Card image-->
-    <div class="view overlay hm-white-slight">
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-        <a href="#">
-            <div class="mask waves-effect waves-light"></div>
-        </a>
-    </div>
-    <!--/.Card image-->
-
-    <!--Card content-->
-    <div class="card-block">
-        <!--Title-->
-        <h4 class="card-title">Card title</h4>
-        <!--Text-->
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Button</a>
-    </div>
-    <!--/.Card content-->
-
-</div>
-<!--/.Card-->
-<!-- modal view -->
-        <ion-nav-view name="fabContent"></ion-nav-view>
-
+ 
+    <ion-view view-title="Article" class="text-center">
+    <ion-content overflow-scroll="true">
+        <div class="item card-item">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                 <span class="avatar" style="background-image: url('img/ionic.png');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item card-item">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                 <span class="avatar" style="background-image: url('img/ionic.png');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
   </ion-content>
+
   </ion-view>
+

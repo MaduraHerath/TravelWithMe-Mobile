@@ -94,6 +94,23 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
           }
         })
 
+  .state('app.tabs.travels',{
+    url: '/travels',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/travels.html',
+                controller: 'TravelsCtrl'
+            },
+            'fabContent':{
+              template: '<button id="fab-activity" ng-click="modal.show()" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-navicon"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-activity').classList.toggle('on');
+                    }, 200);
+                }            
+            }
+          }
+        })
   .state('app.trip', {
     url: '/trip',
         views: {

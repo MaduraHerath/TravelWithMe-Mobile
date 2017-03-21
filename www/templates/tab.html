@@ -1,15 +1,15 @@
-  
+
 <ion-tabs class="tabs-assertive tabs-icon-top">
 
-  <ion-tab title="All" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="app.tabs.all">
-        <ion-nav-view name="menuContent"></ion-nav-view>
+  <ion-tab title="All" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="app.tabs.all" ng-click="gotoall()">
+        
   </ion-tab>
 
-  <ion-tab title="Article" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-    <!-- Tab 2 content -->
+  <ion-tab title="Article" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="app.tabs.article" ng-click="gotoarticle()">
+    
   </ion-tab>
 
-  <ion-tab title="Travels" icon-on="ion-ios-navigate" icon-off="ion-ios-navigate-outline">
+  <ion-tab title="Travels" icon-on="ion-ios-navigate" icon-off="ion-ios-navigate-outline" ui-sref="app.tabs.travels" ng-click="gototravels()" >
     <!-- Tab 3 content -->
   </ion-tab>
 
@@ -21,5 +21,5 @@
     <!-- Tab 3 content -->
   </ion-tab>
 </ion-tabs>
-
+  <ion-nav-view name="menuContent" style="margin-top:12%"></ion-nav-view>
 
