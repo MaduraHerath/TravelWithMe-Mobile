@@ -8,7 +8,37 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
 
 
 
-.run(function($ionicPlatform ,$rootScope, $state) {
+.run(function($ionicPlatform ,$rootScope, $state ,$ionicPopup,$ionicHistory) {
+  $ionicPlatform.registerBackButtonAction(function(e) {
+ e.preventDefault();
+ function showConfirm() {
+  var confirmPopup = $ionicPopup.show({
+   title : 'Exit TravelWithMe?',
+   template : 'Are you sure you want to exit TravelWithMe?',
+   buttons : [{
+    text : 'Cancel',
+    type : 'button-royal button-outline',
+   }, {
+    text : 'Ok',
+    type : 'button-royal',
+    onTap : function() {
+     ionic.Platform.exitApp();
+    }
+   }]
+  });
+ };
+
+ // Is there a page to go back to?
+ if ($ionicHistory.backView()) {
+  // Go back in history
+  $ionicHistory.backView().go();
+ } else {
+  // This is the last page: Show confirmation popup
+  showConfirm();
+ }
+
+ return false;
+}, 101);
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -64,15 +94,8 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
             'menuContent': {
                 templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl'
-            },
-            'fabContent':{
-              template: '<button id="fab-activity" ng-click="modal.show()" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-navicon"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-activity').classList.toggle('on');
-                    }, 200);
-                }            
             }
+
           }
         })
   
@@ -114,22 +137,10 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
   .state('app.trip', {
     url: '/trip',
         views: {
-          'tab':{
-            templateUrl:'templates/tab.html',
-            controller:'TabCtrl'
-          },
             'menuContent': {
                 templateUrl: 'templates/trip.html',
                 controller: 'TripCtrl'
             },
-            'fabContent':{
-              template: '<button id="fab-activity" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-plus"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-activity').classList.toggle('on');
-                    }, 200);
-                }            
-            }
           }
         })
 
