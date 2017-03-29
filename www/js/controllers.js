@@ -5,6 +5,8 @@ angular.module('starter.controllers', [])
 
 
 .controller('AppCtrl', function($scope, $ionicModal, $ionicPopover, $timeout) {
+
+    
     // Form data for the login modal
     $scope.loginData = {};
     $scope.isExpanded = false;

@@ -1,15 +1,20 @@
       <ion-modal-view>
-  <ion-header-bar>
-<div class="bar bar-header item-input-inset">
-  <label class="item-input-wrapper">
-    <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="Search">
-  </label>
-  <button class="button button-clear" ng-click="modal-hide()">
-    Cancel
-  </button>
-</div>
-</ion-header-bar>
+<ion-content direction="y" scrollbar-y="false">
+
+    <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+    </ion-refresher>
+
+    <ion-list>
+      <ion-item collection-repeat="item in items" >
+        <p>{{item.text}}</p>
+      </ion-item>
+    </ion-list>
+
+    <div ng-if="items !== undefined && !items.length" class="no-results">
+      <p>No Results</p>
+    </div>
+
+  </ion-content>
       </ion-modal-view>
 
 
