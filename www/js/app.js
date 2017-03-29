@@ -67,6 +67,18 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
     controller:'LoginCtrl'
   })
 
+  .state("signup",{
+    url:'/signup',
+    templateUrl:'templates/signup.html',
+    controller:'SignupCtrl'
+  })
+
+    .state("vertify",{
+    url:'/vertify',
+    templateUrl:'templates/vertify.html',
+    controller:'VertifyCtrl'
+  })
+
 
   .state('app',{
     url:'/app',
