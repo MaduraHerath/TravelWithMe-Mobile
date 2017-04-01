@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ionic-material": "^0.4.2",
-    "md-steppers": "^0.3.4"
+    "md-steppers": "^0.3.4",
+    "material-steppers": "^1.0.3"
   }
 }

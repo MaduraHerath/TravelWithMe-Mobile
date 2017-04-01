@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett.ionic.filter.bar','ngAnimate','ngAria','ionMdInput','ngMaterial'])
+angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett.ionic.filter.bar','ngAnimate','ionMdInput','ngMaterial', 'mdSteppers'])
 
 
 
@@ -135,14 +135,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
             'menuContent': {
                 templateUrl: 'templates/travels.html',
                 controller: 'TravelsCtrl'
-            },
-            'fabContent':{
-              template: '<button id="fab-activity" ng-click="modal.show()" class="button button-fab button-fab-bottom-right expanded button-energized-900 flap"><i class="icon ion-navicon"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-activity').classList.toggle('on');
-                    }, 200);
-                }            
             }
           }
         })
@@ -152,7 +144,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic-material','jett
             'menuContent': {
                 templateUrl: 'templates/trip.html',
                 controller: 'TripCtrl'
-            },
+            }
           }
         })
 
