@@ -1,98 +1,22 @@
 <ion-view view-title="Trips">
 
   <ion-content ng-cloak ng-app="starter" ng-controller="TripCtrl as vm" layout="column">
-  <md-content padding>
-      <div class="toggle-options">
-        <md-button class="md-primary md-raised" ng-click="vm.toggleMobileStepText();">Toggle MobileStepText</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.toggleVertical();">Toggle Vertical</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.toggleLinear();">Toggle Linear</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.toggleAlternative();">Toggle Alternative</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.showError();">Show error</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.clearError();">Clear error</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.showFeedback();">Show Feedback</md-button>
-        <md-button class="md-primary md-raised" ng-click="vm.clearFeedback();">Clear Feedback</md-button>
-    </div>
- <md-stepper id="stepper-demo" md-mobile-step-text="vm.isMobileStepText" md-vertical="vm.isVertical" md-linear="vm.isLinear"
-        md-alternative="vm.isAlternative">
-        <md-step md-label="Select a campaign">
-            <md-step-body>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-
-            </md-step-body>
-            <md-step-actions>
-                <md-button class="md-primary md-raised" ng-click="vm.selectCampaign();">Continue</md-button>
-                <md-button class="md-primary" ng-click="vm.cancel();">Cancel</md-button>
-            </md-step-actions>
-        </md-step>
-
-        <md-step md-label="Create an group">
-            <md-step-body>
-                <md-input-container>
-                    <label>Username</label>
-                    <input type="text" ng-model="vm.user.name">
-                </md-input-container>
-
-                <md-input-container>
-                    <label>Email</label>
-                    <input type="email" ng-model="vm.user.email">
-                </md-input-container>
-
-                <md-input-container>
-                    <label>Password</label>
-                    <input type="password" ng-model="vm.user.password">
-                </md-input-container>
-
-                <md-input-container>
-                    <label>Confirm password</label>
-                    <input type="password" ng-model="vm.user.confirmPassword">
-                </md-input-container>
-            </md-step-body>
-
-            <md-step-actions>
-                <md-button class="md-primary md-raised" ng-click="vm.nextStep();">Continue</md-button>
-                <md-button class="md-primary" ng-click="vm.previousStep();">Back</md-button>
-            </md-step-actions>
-        </md-step>
-
-        <md-step md-label="Create an ad">
-            <md-step-body>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-            </md-step-body>
-
-            <md-step-actions>
-                <md-button class="md-primary md-raised" ng-click="vm.nextStep();">Continue</md-button>
-                <md-button class="md-primary" ng-click="vm.previousStep();">Back</md-button>
-            </md-step-actions>
-        </md-step>
-
-        <md-step md-label="Publish the ad" md-optional="Optional">
-            <md-step-body>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque,
-                    sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime
-                    voluptatibus, eaque autem!</p>
-            </md-step-body>
-            <md-step-actions>
-                <md-button class="md-primary md-raised" ng-click="vm.nextStep();">Complete</md-button>
-                <md-button class="md-primary" ng-click="vm.previousStep();">Back</md-button>
-            </md-step-actions>
-        </md-step>
-
-
-    </md-stepper>
-</md-content>
+   <md-content flex="nogrow" >
+        <div>
+            <md-card>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>
+                            <md-icon md-svg-icon="md-menu"></md-icon>
+                            <span>Create account</span>
+                        </h2>
+                    </div>
+                </md-toolbar>
+                <md-stepper-card-content class="md-no-padding">
+                    
+                </md-stepper-card-content>
+            </md-card>
+        </div>
+    </md-content>
   </ion-content>
 </ion-view>
