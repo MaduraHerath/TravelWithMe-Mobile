@@ -1,7 +1,59 @@
 
  
     <ion-view view-title="Article" class="text-center">
-    <ion-content overflow-scroll="true">
+    <ion-content overflow-scroll="true"  has-bouncing="true">
+        <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+    </ion-refresher>
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/sri.jpg">
+    <h2>Marty McFly</h2>
+    <p>November 05, 1955</p>
+  </div>
+  <h2 class="title">Temple of the Tooth</h2>
+  <div class="item item-body">
+    <img class="full-imagec wave ink" src="img/temple.jpg">
+    <p>
+      Sri Dalada Maligawa or the Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy, Sri Lanka. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha.
+    </p>
+    <p>
+
+
+<md-button style="background-color: #F1A9A0 ;color: white">View</md-button>
+ 
+      <a href="#" class="subdued">Reviews</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="img/logo.png">
+    <h2>Marty McFly</h2>
+    <p>November 05, 1955</p>
+  </div>
+  <h2 class="title">Samadhi Statue</h2>
+  <div class="item item-body">
+    <img class="full-imagec wave ink" src="img/samadi.jpg">
+    <p>
+     The Samadhi Statue is a statue situated at Mahamevnāwa Park in Anuradhapura, Sri Lanka. The Buddha is depicted in the position of the Dhyana Mudra, the posture of meditation associated with his first Enlightenment. Whether the Buddha's Enlightenment was the experience technically called Samadhi, or some other phenomenon, may depend upon the philosophical allegiance of the believer. In the Dhyana Mudra the Buddha sits cross - legged with his upturned palms placed one over the other on his lap. This position is universally known throughout the Buddhist world, and this statue is therefore one of the most typical pieces of Buddhist sculpture. It is not to be confused with the very similar "Earth-Touching Mudra," which depicts the simple action the Buddha took to fend off the illusions projected by Mara, who was desperate to prevent the Buddha from realizing that his, Mara's, projections, and with them the entire world, are an illusion. This statue is 8 feet in height and carved from granite.
+    </p>
+    <p>
+
+
+<md-button style="background-color: #F1A9A0 ;color: white">View</md-button>
+ 
+      <a href="#" class="subdued">Reviews</a>
+    </p>
+  </div>
+
+</div>
+
+
+
 <div class="list card">
 
   <div class="item item-avatar">
@@ -11,7 +63,7 @@
   </div>
 
   <div class="item item-body">
-    <img class="full-image" src="img/postimg.jpg">
+    <img class="full-imagec wave ink" src="img/postimg.jpg">
     <p>
       This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
       the content is from a card-body consisting of an image and paragraph text. The footer
@@ -19,29 +71,15 @@
     </p>
     <p>
 
-  <a class="button button-icon icon ion-settings"></a>
 
+<md-button style="background-color: #F1A9A0 ;color: white">View</md-button>
  
-      <a href="#" class="subdued">5 Comments</a>
+      <a href="#" class="subdued">Reviews</a>
     </p>
   </div>
 
 </div>
-        <div class="item card-item">
-            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
-                <div class="item item-avatar item-text-wrap">
-                 <span class="avatar" style="background-image: url('img/ionic.png');"></span>
-                    <strong>Jon Snow</strong> knows nothing.
-                    <div class="card-footer text-right">
-                        <i class="icon ion-chatbubbles positive"></i> 6
-                        <i class="icon ion-heart assertive"></i> 23
-                        <div class="pull-left">
-                            <i class="icon ion-clock"></i> just now
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
   </ion-content>
 

@@ -8,8 +8,8 @@ angular.module("starter")
             center: myLatlng,
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
- 
+        };/*
+  map.on(plugin.google.maps.event.MAP_READY, onMapInit);*/
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
  
         navigator.geolocation.getCurrentPosition(function(pos) {

@@ -1,22 +1,141 @@
 <ion-view view-title="Trips">
+<ion-content>
+<md-stepper-card-content class="md-no-padding">
+<md-stepper id="stepper-demo" 
+        md-mobile-step-text="$ctrl.isMobileStepText" 
+        md-vertical="$ctrl.isVertical" 
+        md-linear="$ctrl.isLinear"
+        md-alternative="$ctrl.isAlternative">
+        <md-step md-label="Step One" md-dynamic-height flex>
+            <md-step-body >   
 
-  <ion-content ng-cloak ng-app="starter" ng-controller="TripCtrl as vm" layout="column">
-   <md-content flex="nogrow" >
-        <div>
-            <md-card>
-                <md-toolbar>
-                    <div class="md-toolbar-tools">
-                        <h2>
-                            <md-icon md-svg-icon="md-menu"></md-icon>
-                            <span>Create account</span>
-                        </h2>
-                    </div>
-                </md-toolbar>
-                <md-stepper-card-content class="md-no-padding">
-                    
-                </md-stepper-card-content>
-            </md-card>
+
+<div ng-if="checked" style="height:200px;z-index: 0 !important;">
+    <div class="button-bar">
+  <a class="button button-dark waves-effect waves-light ink">Eat</a>
+  <a class="button button-dark waves-effect waves-light ink">Travel</a>
+  <a class="button button-dark waves-effect waves-light ink">Sleep</a>
+</div>
+  <div flex class="layout-fill animate-fade-slide-in" id="map">
+
+  </div>
+
+
+
+  </div>
+  <md-card>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Let's Plan Your Trip</span>
+        <span class="md-subhead">If you better experience fill this form </span>
+      </md-card-title-text>
+    </md-card-title>
+
+    <md-card-content>
+      <div layout="row">
+        <md-input-container>
+          <label>From</label>
+          <input>
+        </md-input-container>
+
+        <md-input-container>
+          <label>To</label>
+          <input>
+        </md-input-container>
+
+   <!--      <md-input-container>
+          <label>Duration</label>
+          <md-select ng-model="ctrl.userState">
+            <md-option><em>None</em></md-option>
+            <md-option ng-repeat="item in items"" ng-value="state.abbrev" ng-disabled="$index === 1">
+              {{items.length}}
+            </md-option>
+          </md-select>
+        </md-input-container> -->
+      </div>
+      <div class="row">
+     <ion-scroll>
+<div class="list">
+
+    <a class="item item-avatar" href="#">
+      <img src="img/logo.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+     <md-button style="background-color: #F1A9A0 ;color: white">View</md-button>
+     <md-button style="background-color: #3498db ;color: white">Add</md-button>
+    </a>
+
+        <a class="item item-avatar" href="#">
+      <img src="img/sri.jpg">
+      <h2>Temple Of tooth</h2>
+      <p>Sri Dalada Maligawa or the Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy, Sri Lanka. It is located in the royal palace complex of the former Kingdom of Kandy,</p>
+    </a>
+
+
+        <a class="item item-avatar" href="#">
+      <img src="img/logo.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a>
+
+
+        <a class="item item-avatar" href="#">
+      <img src="img/logo.png">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a>
+
+</div> 
+</ion-scroll>  
+    
+      </div>
+      <div class="row">        
+        <div class="col col-6">
+        <md-input-container>
+            <md-switch  ng-model="checked" aria-label="checked">
+           Map Enable ?
+            </md-switch>
+        </md-input-container>        
         </div>
-    </md-content>
-  </ion-content>
+          </div>
+    </md-card-content>
+  </md-card>           
+
+            </md-step-body>
+            <md-step-actions class = " text-center">
+                <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();" type="submit">Go</md-button>
+
+            </md-step-actions>
+        </md-step>
+        <md-step md-label="Create an group">
+            <md-step-body>
+               <md-content><div class="list">
+
+  <div class="item item-divider">
+    Places That you may Visit
+  </div>
+
+<ul class="list">
+    <li class="item">
+      item
+    </li>
+    <li  class="item">item2</li>
+    <li  class="item">item3</li>
+</ul>
+ 
+</div>
+
+
+
+               </md-content>
+            </md-step-body>
+            <md-step-actions>
+                <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+                <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
+            </md-step-actions>
+        </md-step>
+        <!-- Other steps if needed ... -->
+    </md-stepper>
+</md-stepper-card-content>
+</ion-content>
 </ion-view>
