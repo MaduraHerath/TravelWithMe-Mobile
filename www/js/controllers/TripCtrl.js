@@ -1,5 +1,9 @@
 angular.module("starter")
 .controller('TripCtrl',function($state, $scope, $ionicModal,ionicMaterialInk){
+   this.userState = '';
+        this.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+            'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+            'WY').split(' ').map(function (state) { return { abbrev: state }; });
 ionicMaterialInk.displayEffect();
    google.maps.event.addDomListener(window, 'load', function() {
         var myLatlng = new google.maps.LatLng(6.8614355, 79.8805176);
@@ -110,33 +114,8 @@ ionicMaterialInk.displayEffect();
 
     }
 
-    function loadContacts() {
-      var contacts = [
-        'Marina Augustine',
-        'Oddr Sarno',
-        'Nick Giannopoulos',
-        'Narayana Garner',
-        'Anita Gros',
-        'Megan Smith',
-        'Tsvetko Metzger',
-        'Hector Simek',
-        'Some-guy withalongalastaname'
-      ];
 
-      return contacts.map(function (c, index) {
-        var cParts = c.split(' ');
-        var email = cParts[0][0].toLowerCase() + '.' + cParts[1].toLowerCase() + '@example.com';
-        var hash = CryptoJS.MD5(email);
 
-        var contact = {
-          name: c,
-          email: email,
-          image: '//www.gravatar.com/avatar/' + hash + '?s=50&d=retro'
-        };
-        contact._lowername = contact.name.toLowerCase();
-        return contact;
-      });
-    }
   }
 
 })();

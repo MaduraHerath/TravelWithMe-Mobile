@@ -6,16 +6,12 @@
         md-vertical="$ctrl.isVertical" 
         md-linear="$ctrl.isLinear"
         md-alternative="$ctrl.isAlternative">
-        <md-step md-label="Step One" md-dynamic-height flex>
+        <md-step md-label="Step One" >
             <md-step-body >   
 
 
 <div ng-if="checked" style="height:200px;z-index: 0 !important;">
-    <div class="button-bar">
-  <a class="button button-dark waves-effect waves-light ink">Eat</a>
-  <a class="button button-dark waves-effect waves-light ink">Travel</a>
-  <a class="button button-dark waves-effect waves-light ink">Sleep</a>
-</div>
+
   <div flex class="layout-fill animate-fade-slide-in" id="map">
 
   </div>
@@ -27,22 +23,24 @@
     <md-card-title>
       <md-card-title-text>
         <span class="md-headline">Let's Plan Your Trip</span>
-        <span class="md-subhead">If you better experience fill this form </span>
+        <span class="md-subhead">If you need better experience in travelling fill this form </span>
       </md-card-title-text>
     </md-card-title>
 
     <md-card-content>
       <div layout="row">
+      <div class="col col-sm-6">
         <md-input-container>
           <label>From</label>
           <input>
         </md-input-container>
-
+      </div>
+      <div class="col col-sm-6">
         <md-input-container>
           <label>To</label>
           <input>
         </md-input-container>
-
+        </div>
    <!--      <md-input-container>
           <label>Duration</label>
           <md-select ng-model="ctrl.userState">
@@ -53,8 +51,18 @@
           </md-select>
         </md-input-container> -->
       </div>
+      <div class=" text-center">
+          <md-button class="md-fab" ng-disabled="false"   md-colors="PINK" aria-label="Comment">
+            <label>Go</label>
+        </md-button>
+      </div>
+<h3 class="md-headline">Places you might visit</h3><br>
+<div class="row">    <div class="button-bar">
+  <a class="button button-dark waves-effect waves-light ink">Eat</a>
+  <a class="button button-dark waves-effect waves-light ink">Travel</a>
+  <a class="button button-dark waves-effect waves-light ink">Sleep</a>
+</div></div>
       <div class="row">
-     <ion-scroll>
 <div class="list">
 
     <a class="item item-avatar" href="#">
@@ -68,7 +76,7 @@
         <a class="item item-avatar" href="#">
       <img src="img/sri.jpg">
       <h2>Temple Of tooth</h2>
-      <p>Sri Dalada Maligawa or the Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy, Sri Lanka. It is located in the royal palace complex of the former Kingdom of Kandy,</p>
+      <p>Sri Dalada Maligawa or </p>
     </a>
 
 
@@ -86,7 +94,7 @@
     </a>
 
 </div> 
-</ion-scroll>  
+
     
       </div>
       <div class="row">        
@@ -103,39 +111,94 @@
 
             </md-step-body>
             <md-step-actions class = " text-center">
-                <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();" type="submit">Go</md-button>
+                <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();" type="submit">Next</md-button>
 
             </md-step-actions>
         </md-step>
         <md-step md-label="Create an group">
             <md-step-body>
-               <md-content><div class="list">
+              <md-card>
+                <md-card-content>
+                <div class="row">
+              <div class="col pull-right">
+                <h3 class="md-subhead " >Total Budget</h3>
+               <h4 class="md-title" style="color: red">Rs 46,000/= </h4>
+                </div>
+                </div>
+      <div layout="row" layout-align="space-between center">
+        <span>What is your Trip Type?</span>
+        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
+          <md-option value="2">Romantic</md-option>
+          <md-option value="4">Family</md-option>
+          <md-option value="1">Single</md-option>
+          <md-option value="5">With friends</md-option>
+        </md-select>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span>How many people are there?</span>
+        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
+          <md-option value="1">1</md-option>
+          <md-option value="2">2</md-option>
+          <md-option value="3">3</md-option>
+          <md-option value="4">4 friends</md-option>
+          <md-option value="5">More</md-option>          
+        </md-select>
+      </div>
 
-  <div class="item item-divider">
-    Places That you may Visit
-  </div>
-
-<ul class="list">
-    <li class="item">
-      item
-    </li>
-    <li  class="item">item2</li>
-    <li  class="item">item3</li>
-</ul>
- 
-</div>
 
 
+    </md-card-content>
+  </md-card> 
 
-               </md-content>
+
             </md-step-body>
             <md-step-actions>
                 <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
                 <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
             </md-step-actions>
         </md-step>
-        <!-- Other steps if needed ... -->
-    </md-stepper>
+        <md-step md-label="Create an group">
+            <md-step-body>
+              <md-card>
+                <md-card-content>
+                <div class="row">
+              <div class="col pull-right">
+                <h3 class="md-subhead " >Total Budget</h3>
+               <h4 class="md-title" style="color: red">Rs 46,000/= </h4>
+                </div>
+                </div>
+      <div layout="row" layout-align="space-between center">
+        <span>What is your Trip Type?</span>
+        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
+          <md-option value="2">Romantic</md-option>
+          <md-option value="4">Family</md-option>
+          <md-option value="1">Single</md-option>
+          <md-option value="5">With friends</md-option>
+        </md-select>
+      </div>
+      <div layout="row" layout-align="space-between center">
+        <span>How many people are there?</span>
+        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
+          <md-option value="1">1</md-option>
+          <md-option value="2">2</md-option>
+          <md-option value="3">3</md-option>
+          <md-option value="4">4 friends</md-option>
+          <md-option value="5">More</md-option>          
+        </md-select>
+      </div>
+
+
+
+    </md-card-content>
+  </md-card> 
+
+
+            </md-step-body>
+            <md-step-actions>
+                <md-button class="md-primary md-raised" ng-click="$ctrl.nextStep();">Continue</md-button>
+                <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
+            </md-step-actions>
+        </md-step>    </md-stepper>
 </md-stepper-card-content>
 </ion-content>
 </ion-view>
