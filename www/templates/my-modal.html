@@ -1,4 +1,4 @@
-      <ion-modal-view>
+      <ion-modal-view style="margin-top: 45px;">
  <ion-content direction="y" scrollbar-y="false">
 
     <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
@@ -6,7 +6,7 @@
 
     <ion-list>
       <ion-item collection-repeat="item in items" >
-        <p>{{item.text}}</p>
+        <p href="#">{{item.text}}</p>
       </ion-item>
     </ion-list>
 

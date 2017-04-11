@@ -54,6 +54,7 @@ angular.module('jett.ionic.filter.bar', ['ionic']);
             // Invokes cancel function defined in filterBar service
             var cancelFilterBar = function () {
               $scope.cancelFilterBar();
+              
             };
 
             // If backdrop is enabled, create and append it to filter, then add click/swipe listeners to cancel filter

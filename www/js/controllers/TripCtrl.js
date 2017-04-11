@@ -1,9 +1,21 @@
 angular.module("starter")
 .controller('TripCtrl',function($state, $scope, $ionicModal,ionicMaterialInk){
-   this.userState = '';
-        this.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
-            'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
-            'WY').split(' ').map(function (state) { return { abbrev: state }; });
+ $scope.events = ["Culture","Outdoors","Relaxing","Romantic","Kids Friendly","Beaches","Historic sites","Museums","Shopping","Hiking"];
+      $scope.selected = [];
+
+      $scope.toggle = function (events, list) {
+        var idx = list.indexOf(events);
+        if (idx > -1) {
+          list.splice(idx, 1);
+        }
+        else {
+          list.push(events);
+        }
+      };
+
+      $scope.exists = function (events, list) {
+        return list.indexOf(events) > -1;
+      };
 ionicMaterialInk.displayEffect();
    google.maps.event.addDomListener(window, 'load', function() {
         var myLatlng = new google.maps.LatLng(6.8614355, 79.8805176);

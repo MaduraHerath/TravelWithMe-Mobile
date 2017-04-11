@@ -6,7 +6,7 @@
         md-vertical="$ctrl.isVertical" 
         md-linear="$ctrl.isLinear"
         md-alternative="$ctrl.isAlternative">
-        <md-step md-label="Step One" >
+        <md-step md-label="" >
             <md-step-body >   
 
 
@@ -115,7 +115,7 @@
 
             </md-step-actions>
         </md-step>
-        <md-step md-label="Create an group">
+        <md-step md-label="">
             <md-step-body>
               <md-card>
                 <md-card-content>
@@ -144,9 +144,27 @@
           <md-option value="5">More</md-option>          
         </md-select>
       </div>
+      <div layout="row" layout-align="space-between center">
+        <span>Night Method</span>
+        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
+          <md-option value="1">None</md-option>
+          <md-option value="2">5 Star Hotel</md-option>
+          <md-option value="3">Resturent</md-option>
+          <md-option value="4">Camping</md-option>
+          <md-option value="5">Other</md-option>          
+        </md-select>
+      </div>
 
-
-
+        <fieldset class="standard" >
+          <h2>Events  </h2>
+          <div layout="row" layout-wrap flex>
+            <div flex="50" ng-repeat="item in events">
+              <md-checkbox ng-checked="" ng-click="toggle(item, selected)">
+                {{ item }} <span ng-if="">selected</span>
+              </md-checkbox>
+            </div>
+          </div>
+        </fieldset>
     </md-card-content>
   </md-card> 
 
@@ -157,40 +175,19 @@
                 <md-button class="md-primary" ng-click="$ctrl.previousStep();">Back</md-button>
             </md-step-actions>
         </md-step>
-        <md-step md-label="Create an group">
+        <md-step md-label="">
             <md-step-body>
               <md-card>
                 <md-card-content>
-                <div class="row">
-              <div class="col pull-right">
-                <h3 class="md-subhead " >Total Budget</h3>
-               <h4 class="md-title" style="color: red">Rs 46,000/= </h4>
-                </div>
-                </div>
-      <div layout="row" layout-align="space-between center">
-        <span>What is your Trip Type?</span>
-        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
-          <md-option value="2">Romantic</md-option>
-          <md-option value="4">Family</md-option>
-          <md-option value="1">Single</md-option>
-          <md-option value="5">With friends</md-option>
-        </md-select>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <span>How many people are there?</span>
-        <md-select ng-model="weapon" placeholder="Type" class="md-no-underline">
-          <md-option value="1">1</md-option>
-          <md-option value="2">2</md-option>
-          <md-option value="3">3</md-option>
-          <md-option value="4">4 friends</md-option>
-          <md-option value="5">More</md-option>          
-        </md-select>
-      </div>
+                   <h3>Hotels</h3>
+                </md-card-content>
+              </md-card> 
 
-
-
-    </md-card-content>
-  </md-card> 
+              <md-card>
+                <md-card-content>
+                   <h3>Hotels</h3>
+                </md-card-content>
+              </md-card> 
 
 
             </md-step-body>
