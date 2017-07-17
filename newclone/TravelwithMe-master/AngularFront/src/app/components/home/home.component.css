@@ -1,0 +1,160 @@
+.centered {
+  position: absolute; /* or absolute */
+  top: 20%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  z-index: 52;
+}
+
+
+
+#custom-search-input {
+  margin:0;
+  margin-top: 10px;
+  padding: 0;
+  background-color:whitesmoke!important;
+}
+
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color:deepskyblue !important;
+}
+
+.search-query:focus + button {
+  z-index: 3;
+}
+
+
+html,
+body,
+.view {
+  height: 100%;
+}
+/* Navigation*/
+
+.navbar {
+  background-color: transparent;
+  color: white;
+}
+
+.scrolling-navbar {
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+  background-color: #1C2331;
+}
+
+footer.page-footer {
+  background-color: #1C2331;
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331;
+  }
+}
+.description {
+  padding-top: 25%;
+  padding-bottom: 3rem;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .description {
+    padding-top: 7rem;
+    text-align: center;
+  }
+}
+/* Carousel*/
+.viewone {
+  background: url("https://static.pexels.com/photos/34020/pexels-photo.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .full-bg-imgs,
+  .viewone {
+    height: auto;
+    position: relative;
+  }
+}
+.carousel,
+.carousel-item,
+.active {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url("http://goodfon.org/_ph/85/213022566.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url("https://wallpaperscraft.com/image/guy_mountains_travel_27349_3840x2400.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url("http://www.hdwallpaperup.com/wp-content/uploads/2014/12/Traveling-alone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Caption*/
+
+.flex-center {
+  color: #fff;
+}
+
+@media (min-width: 776px) {
+  .carousel .view ul li {
+    display: inline;
+  }
+  .carousel .view .full-bg-img ul li .flex-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+section
+{
+  background:#FEFFD6 ;
+}
+

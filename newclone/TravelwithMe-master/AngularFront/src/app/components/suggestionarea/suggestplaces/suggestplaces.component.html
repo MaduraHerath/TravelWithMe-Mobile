@@ -1,0 +1,64 @@
+<!--Slides-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+<div class="carousel-inner" role="listbox"  *ngIf="nearby" >
+
+  <!--First slide-->
+  <div class="carousel-item active" >
+    <div class="card card-cascade wider">
+      <!--Card image-->
+      <div class="view overlay hm-white-slight wow fadeInDown" data-wow-delay="0.2s">
+        <img src="http://www.lanka-holidays.com/images/photos/rain-forest.jpg" class="img-fluid" alt="">
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+      <!--/.Card image-->
+
+      <!--Card content-->
+      <div class="card-block text-xs-center wow fadeInDown">
+        <!--Title-->
+        <h4 class="card-title">Sinharaja</h4>
+        <!--Text-->
+        <p class="card-text">Southern Province</p>
+        <a class="btn btn-primary"> Go to Page</a>
+      </div>
+      <!--/.Card content-->
+    </div>
+  </div>
+
+  <!--First slide-->
+  <div class="carousel-item"  *ngFor="let places of nearby">
+    <div class="card card-cascade wider">
+      <!--Card image-->
+      <div class="view overlay hm-white-slight wow fadeInDown" data-wow-delay="0.2s">
+        <img src="http://mdbootstrap.com/images/regular/people/img%20(20).jpg" class="img-fluid" alt="">
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+      <!--/.Card image-->
+
+      <!--Card content-->
+      <div class="card-block text-xs-center wow fadeInDown">
+        <!--Title-->
+        <h4 class="card-title">{{places.name}}</h4>
+        <!--Text-->
+        <p class="card-text">{{ places.formatted_address}}</p>
+        <a class="btn btn-primary"> Go to Page</a>
+      </div>
+      <!--/.Card content-->
+    </div>
+  </div>
+</div>
+
+  <div class="controls-top">
+    <a class="btn-floating btn-small waves-effect waves-light" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn-floating btn-small waves-effect waves-light" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+  </div>
+
+  <!--/.First slide-->
+</div>
+
+
+<!--</div>-->
+<!--/.Slides-->

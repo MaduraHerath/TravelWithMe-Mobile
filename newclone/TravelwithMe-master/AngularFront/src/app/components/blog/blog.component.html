@@ -1,0 +1,148 @@
+<script [src]="javascript1"></script>
+<app-sideview>
+
+</app-sideview>
+<app-navbar></app-navbar>
+<div *ngIf="alert">
+<a class="{{ alert.alert}}" >{{ alert.msg}}</a>
+
+</div>
+<main class="Mymain">
+  <div class="row">
+    <form (submit)="submitBlogpost()">
+      <div class="col-md-8">
+
+<div class="row">
+        <mdl-textfield
+          type="text"
+          label="Title"
+          name="postTitle"
+          [(ngModel)]="postTitle"
+          placeholder="Enter Your Post Title Here"
+          autofocus
+        ></mdl-textfield>
+
+
+        <div  [froalaEditor] [(ngModel)]="body" name="body" class="blogbody" style="height: 300px;"></div>
+
+
+
+      </div>
+
+      <div class="row">
+        <mdl-card mdl-shadow="2" style="width: auto">
+          <mdl-card-title>
+            <h2 mdl-card-title-text>Recently visited places</h2>
+          </mdl-card-title>
+          <mdl-card-supporting-text>
+            <div class="col-md-4">
+              <!--Card image-->
+              <div class="card-overlay" style="background-image: url('http://static.panoramio.com/photos/large/16856289.jpg')">
+
+                <!--Content-->
+                <div class="white-text text-center">
+                  <div class="card-block">
+                    <h3>Galle </h3>
+
+                    <a class="btn btn-lg btn-info"><i class="fa fa-clone left"></i> Create a Blog</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+              <!--Card image-->
+              <div class="card-overlay" style=" background-image: url('http://elitetours.lk/images/slide-06.jpg')">
+
+                <!--Content-->
+                <div class="white-text text-center">
+                  <div class="card-block">
+                    <h3>Pasikuda</h3>
+
+                    <a class="btn btn-lg btn-info"><i class="fa fa-clone left"></i> Create a Blog</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+          </mdl-card-supporting-text>
+          <mdl-card-actions mdl-card-border>
+            <button mdl-button mdl-colored mdl-ripple>More Places</button>
+          </mdl-card-actions>
+          <mdl-card-menu>
+          </mdl-card-menu>
+        </mdl-card>
+      </div>
+       <!-- end of row-->
+      </div>
+      <div class="col-md-4">
+        <mdl-card mdl-shadow="2">
+          <mdl-card-title>
+            <h2 mdl-card-title-text>Post Details</h2>
+          </mdl-card-title>
+          <mdl-card-supporting-text>
+            <mdl-textfield type="text" label="Location"  floating-label ></mdl-textfield>
+            <div class="col-md-12">
+              <label for="chips">Tags</label>
+              <div class="chips chips-initial" id="chips"></div>
+            </div>
+            <div class="col-md-12">
+
+              <div class="md-form">
+                <textarea type="text" id="form76" class="md-textarea"></textarea>
+                <label for="form76">Description about blog post</label>
+              </div>
+              <div class="md-form">
+                <div class="btn btn-primary btn-sm">
+                  <span>Choose file</span>
+
+                  <input id="file" class="file-path validate" type="file" name="student_img" required (change)="fileChange(input)" #input   />
+                  <div>
+                  </div>
+
+                </div>
+                <img [attr.src]='file_srcs[0]' alt=""/>
+              </div>
+            </div>
+            <br>
+  <div class="row">
+    <form >
+
+    </form>
+
+  </div>
+
+
+          </mdl-card-supporting-text>
+          <mdl-card-actions mdl-card-border>
+            <label for="privacy">Privacy Settings</label>
+            <select id="privacy"class="privacy-select">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Public</option>
+              <option value="2">Friends</option>
+              <option value="3">Only Me</option>
+            </select>
+
+            <button mdl-button mdl-button-type="raised" mdl-colored="accent" mdl-ripple>Preview</button>
+            <button class="text-center" center mdl-button mdl-button-type="raised" mdl-colored="primary" mdl-ripple>
+              Post
+            </button>
+
+
+          </mdl-card-actions>
+
+        </mdl-card>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+</main>

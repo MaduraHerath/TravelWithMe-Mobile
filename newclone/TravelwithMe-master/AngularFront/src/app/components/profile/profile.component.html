@@ -1,0 +1,247 @@
+<script>
+  // SideNav init
+  $(".button-collapse").sideNav();
+  var el = document.querySelector('.custom-scrollbar');
+  Ps.initialize(el);
+</script>
+
+<script>
+  new WOW().init();
+</script>
+<app-sideview>
+
+</app-sideview>
+<app-navbar></app-navbar>
+
+<!--Main layout-->
+<main class="myMain">
+  <div class="container-fluid row">
+
+    <!--Cover-->
+    <div class=" mb-r wow fadeIn" data-wow-delay="0.4s" >
+      <!--Card-->
+      <div  *ngIf="user" class="card testimonial-card  ">
+
+        <!--Background color-->
+        <div class="card-up deep-purple cardone">
+        </div>
+
+        <!--Avatar-->
+        <div class="avatar"><img  src="{{ user.picture_large}}">
+        </div>
+
+        <div class="card-block cardname" style="padding-left: 0; padding-right: 0;">
+          <!--Name-->
+          <h4 class="card-title">{{user.name}}</h4>
+          <hr>
+          <!-- Nav tabs -->
+          <div class="tabs-wrapper">
+            <ul class="nav classic-tabs deep-purple accent-4 " role="tablist">
+              <li class="nav-item tabpad">
+                <a class="nav-link waves-light waves-effect waves-light active tabpad" data-toggle="tab" href="#panel51" role="tab" aria-expanded="true">Time Line</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-light waves-effect waves-light tabpad" data-toggle="tab" href="#panel52" role="tab" aria-expanded="false">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-light waves-effect waves-light tabpad" data-toggle="tab" href="#panel53" role="tab" aria-expanded="false">Friends</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link waves-light waves-effect waves-light tabpad" data-toggle="tab" href="#panel54" role="tab" aria-expanded="false">Pages You Manage</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link waves-light waves-effect waves-light tabpad" data-toggle="tab" href="#panel55" role="tab" aria-expanded="false">Privacy Settings</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Nav tabs -->
+        </div>
+
+      </div>
+      <!--/.Card-->
+    </div>
+    <!--Cover-->
+
+    <!-- Tab panels -->
+    <div class="tab-content card">
+
+      <!--Panel 1 Timeline-->
+      <div class="tab-pane fade in active show" id="panel51" role="tabpanel" aria-expanded="true">
+        <div class="row padthis" >
+          <div class="container">
+            <div class="page-header">
+              <h1 id="timeline">Timeline</h1>
+            </div>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check-circle-o"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small></p>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge danger"><i class="fa fa-credit-card"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge info"><i class="fa fa-floppy-o"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                    <hr>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-badge success"><i class="fa fa-thumbs-up"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!--/.Panel 1-->
+
+      <!--Panel 2 About-->
+      <div class="tab-pane fade" id="panel52" role="tabpanel" aria-expanded="false">
+        <h3>Me</h3>
+      </div>
+      <!--/.Panel 2-->
+
+      <!--Panel 3 Friends-->
+      <div class="tab-pane fade " id="panel53" role="tabpanel" aria-expanded="false" style="margin-top: -2rem; padding: 2rem;">
+      <!--Content of Friends included from friends.html-->
+        <div class = "row">
+          <div class = "col-lg-6" >
+            <h3>Friends</h3>
+              <mdl-list *ngFor="let mutual of friends">
+                <mdl-list-item>
+                  <mdl-list-item-primary-content>
+                    <mdl-icon mdl-list-item-avatar>person</mdl-icon>
+                    <span>{{mutual.name}}</span>
+                  </mdl-list-item-primary-content>
+                  <button class="btn btn-success" (click)="FollowUser(mutual.id,mutual.follow)" >Follow</button>
+                </mdl-list-item>
+
+              </mdl-list>
+          </div>
+
+          <div class="col-lg-6">
+
+            <h3>Places you have reacently tagged</h3>
+
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+      <div class="tab-pane fade " id="panel54" role="tabpanel" aria-expanded="false" style="margin-top: -2rem; padding: 2rem;">
+        <!--Content of Friends included from friends.html-->
+        <div class = "row">
+
+            <h3>Pages you Manage</h3>
+            <div class="card">
+              <!--First column-->
+              <div class="col-md-5 mb-r wow fadeIn" data-wow-delay="0.3s">
+                <!--Featured image-->
+                <div class="view overlay hm-white-slight">
+                  <img src="http://cdn.c.photoshelter.com/img-get/I0000HRADrIT1AeY/s/700/700/Panorama-photo-of-Kandy-Lake-and-the-Temple-of-the-Sacred-Tooth-Relic-Temple-of-the-Tooth-Sri-Dalada-Maligawa-at-sunrise-Kandy-Central-Province-Sri-Lanka-Asia.jpg">
+                  <a>
+                    <div class="mask"></div>
+                  </a>
+                </div>
+              </div>
+            
+            </div>
+        </div>
+
+      </div>
+
+      <div class="tab-pane fade" id="panel55" role="tabpanel" aria-expanded="false">
+        <h3>Privacy settings</h3>
+      </div>
+
+
+    </div>
+<div>
+
+
+
+
+
+</div>
+  </div>
+</main>

@@ -1,0 +1,167 @@
+
+<nav class="navbar navbar-fixed-top scrolling-navbar double-nav">
+
+  <!-- SideNav slide-out button -->
+  <div class="float-xs-left">
+    <a id="linkSlidingBar" href="#" data-activates="slide-out" class="button-collapse waves-effect" ><i class="fa fa-bars" ></i></a>
+  </div>
+
+  <!-- Breadcrumb-->
+  <!--  <div class="breadcrumb-dn">
+      <p>MDB Blog Home Page</p>
+    </div>-->
+
+  <!--<div class = "pull-left">
+    <mdl-textfield type="text" label="maxlength is 10" maxlength="10" placeholder="Seach" class="wave-effect wave-light"><span><i class="fa fa-search" ></i></span></mdl-textfield>
+  </div>-->
+
+  <ul class="nav navbar-nav float-xs-right " >
+    <li class="nav-item ">
+      <a class="nav-link" data-toggle="modal" data-target="#mytrip" ><i class="fa fa fa-plane" ></i><span class="hidden-sm-down">Plan A Trip</span></a>
+    </li>
+
+    <li class="nav-item ">
+      <a class="nav-link" data-toggle="modal" data-target="#myModal" ><i class="fa fa-plus-square" data-dismiss="modal" ></i><span class="hidden-sm-down">Create</span></a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link waves-effect" [routerLink]="['/profile/newsfeed']"><i class="fa fa-home"></i> <span class="hidden-sm-down">Home</span></a>
+    </li>
+    <!--<li class="nav-item ">
+      <a class="nav-link waves-effect"><i class="fa fa-comments-o"></i>  <span class="tag red z-depth-1">2</span><span class="hidden-sm-down" >Message</span></a>&lt;!&ndash;[mdl-badge]="badgeCount"&ndash;&gt;
+    </li>-->
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle waves-effect" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="hidden-sm-down">Profile</span></a>
+      <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+       <li *ngIf="auth.authenticated()" (click)="logoutClick()"><a class="dropdown-item waves-effect">Logout</a></li>
+        <li *ngIf="auth.authenticated()"><a class="dropdown-item waves-effect" [routerLink]="['/profile']">My account</a></li>
+
+       </div>
+    </li>
+
+  </ul>
+
+</nav>
+<!--/.Navbar-->
+
+<!-- Modal -->
+
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+
+
+
+        <div class="row">
+
+            <div class="form-group col-md-12">
+              <div class = "row">
+                <div class ="col-md-6  col-sm-12 card" mdl-shadow="2">
+                  <i class="fa fa-book fa-5x" style = "color: cornflowerblue; margin-left: 100px; padding: 10px;"></i>
+                  <h3 style="text-align: center;">Blog Post</h3>
+                  <h6 style="text-align: center;">Wanna post new experence? </h6>
+                  <a href="" style="margin-left: 80px"><button data-dismiss="modal"   class="btn btn-default waves-effect waves-light" [routerLink]="['/profile/create/blog']">Write Now</button></a>
+                </div>
+
+                <div class ="col-md-6 col-sm-12 card" mdl-shadow="2">
+                  <i class="fa fa-briefcase fa-5x" style = "color: cornflowerblue; margin-left: 100px; padding: 10px;"></i>
+                  <h3 style="text-align: center;">Business</h3>
+                  <h6 style="text-align: center;">You ready for earn?</h6>
+                  <a [routerLink]="['/profile/create/businesspage']" style="margin-left: 80px"><button data-dismiss="modal" class="btn btn-default waves-effect waves-light">Create Now</button></a>
+                </div>
+
+              </div>
+            </div>
+        </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal animated bounceInLeft" id="mytrip" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close"
+                data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Set Destinaion
+        </h4>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <div class="row">
+
+          <div class="col-md-6">
+          <div class="md-form">
+            <input placeholder="{{this.fautoplace}}" type="text" id="From" class="form-control" required="" (keyup)="getFromLocation()" name="flocation" [(ngModel)]="flocation">
+            <label for="From" class="">From</label>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="md-form">
+              <input placeholder=" {{this.tautoplace}}" type="text" id="to" class="form-control" required="" (keyup)="getToLocation()" name="tlocation" [(ngModel)]="tlocation" #origin>
+              <label for="to" class="">To</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row" *ngIf="Fresult">
+
+              <li *ngFor="let place of Fresult"><a  (click)="addToTagfrom($event);false" id="{{place.place_id}}">{{ place.description}}</a></li>
+
+
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="row" *ngIf="Tresult">
+              <div class="col-md-6">
+                <li *ngFor="let place of Tresult"><a (click)="addToTagto($event);false" id="{{place.place_id}}" >{{ place.description}}</a></li>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="set_dest">
+
+
+
+
+
+          </div>
+        </div>
+
+      <!--<div class="col-md-6">-->
+        <!--<div class="container-fluid">-->
+          <!--<img class="img-responsive img-fluid" src="http://www.srilankaforholidays.com/images/srilankamap1.jpg">-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default"
+              data-dismiss="modal">
+        Close
+      </button>
+      <button type="button" class="btn btn-primary"  data-dismiss="modal"  [routerLink]="['/profile/create/trip']" (click)="callLocationPass()">
+        Let's Go
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
