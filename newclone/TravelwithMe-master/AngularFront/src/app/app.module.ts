@@ -65,7 +65,7 @@ import { LocationPassService } from './shared/location-pass.service';
 import { RatingComponent } from './components/rating/rating.component';
 
 
-
+import { StarRatingModule } from 'angular-star-rating';
 
 
 
@@ -164,8 +164,8 @@ const appRoute: Routes = [
     /*FlashMessagesModule,*/
     RouterModule.forRoot(appRoute, { useHash: false }),
     FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
-
+    FroalaViewModule.forRoot(),
+ StarRatingModule.forRoot()
 
 
   ],
